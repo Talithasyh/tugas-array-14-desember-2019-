@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main () 
+{
+int jumlah, nim[10];
+float tugas[100],uts[100],uas[100];
+float akhir[1000];
+char nama[100][100];
+    
+    cout << "\nmasukkan jumlah siswa: ";
+    cin >> jumlah;
+    
+    for (int i=0;i<jumlah;i++){
+        cout << "\nnama mahasiswa : ";
+        cin >> nama[i];
+        cout << "nim : ";
+        cin >> nim[i];
+        cout << "nilai tugas : ";
+        cin >> tugas[i];
+        cout << "nilai uts : ";
+        cin >> uts[i];
+        cout << "nilai uas : ";
+        cin >> uas[i];
+        akhir[i]=(tugas[i]+uts[i]+uas[i])/3;
+        
+cout<<"\n======tampilkan data======\n\n";
+    for (int i=0;i<jumlah;i++){
+        cout<<"\nnama: "<< nama[i];
+        cout<<"\nnim: "<< nim[i];
+        cout<<"\nnilai: "<< akhir[i];
+        
+    }
+    cout<<"\n====tentukan kelulusan====\n\n";
+    for (int i=0;i<jumlah;i++){
+        if (akhir[i]<75){
+                cout<<nama[i]<<" dengan nilai: "<<akhir[i]<<" dinyatakan tidak lulus\n";
+        } else {
+                cout<<nama[i]<<" dengan nilai: "<<akhir[i]<<" dinyatakan lulus\n";
+        }
+    }
+    return 0;
+}
+}
+    
